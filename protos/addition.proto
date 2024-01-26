@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = ".";
+
+
+message AdditionRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+message AdditionResponse {
+  int32 result = 1;
+}
+
+
+
+service Addition { 
+  rpc Add(AdditionRequest) returns (AdditionResponse){}
+  rpc AddChat(stream AdditionRequest) returns (stream AdditionResponse){}
+
+}
