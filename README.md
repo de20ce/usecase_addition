@@ -20,7 +20,7 @@ Here, the server implements two types of operations among the 4 usual gRPC opera
 ## Project pre-requisite
     - On the server side, Python basic dev tools should be installed on your OS, as well as [Python gRPC](https://grpc.io/docs/languages/python/quickstart/) dev tools. 
 
-    - On the client side, basic Dart tools and corresponding gRPC dev tools should also be installed. Since, Flutter is also used for client application.
+    - On the client side, basic Dart tools and corresponding gRPC dev tools should also be installed. Since, Flutter is also used for client application. There is a basic `Python` client in thais repo as well.
     
     - ngrok: you should use [ngrok](https://ngrok.com/docs/guides/device-gateway/linux/) to manage server and client exchange 
     through channel: Flutter uses socket internally to manage connection.
@@ -33,7 +33,7 @@ Here, the server implements two types of operations among the 4 usual gRPC opera
 Open two terminals and run the following command inside the root of the project
 ```bash
 
-    make  runpythonServer
+    make  runpythonserver
 ```
 
 In the other terminal, run the following:
@@ -41,6 +41,11 @@ In the other terminal, run the following:
     make runngrok
 ```
 And that's it on the server side!
+
+For python client:
+```bash
+    make runpythonclient
+```
 
 # Disclaimers
 This project goal is to demonstrate a very simple example about interfacing two or more
